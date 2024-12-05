@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Usuários</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="d-flex align-items-center justify-content-between mb-3">
+            <p class="fs-3">Fake Store</p>
+            <p class="fs-2 text-center mx-auto">Listagem de Usuários</p>
+        </header>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome do Usuário</th>
+                            <th>Email</th>
+                            <th>UserName</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-usuarios">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-primary" onclick="paginaAnterior()">Anterior</button>
+            <button class="btn btn-primary" onclick="proximaPagina()">Próxima</button>
+        </div>
+
+    </main>
+
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="js/index1.js"></script>
+</body>
+
+</html>
