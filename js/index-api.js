@@ -1,14 +1,12 @@
-
-let currentPage = 1; // Página inicial
-const usersPerPage = 12; // Quantidade de usuários por página
+// Arquivo index-api.js
 
 window.onload = (event) => {
-  listarUsuarios(currentPage);
+  listarUsuarios();
 };
 
-async function listarUsuarios(currentPage) {
+async function listarUsuarios() {
   try {
-    const response = await fetch(`https://fakestoreapi.com/users?limit=${usersPerPage}&page=${currentPage}`);
+    const response = await fetch(`https://fakestoreapi.com/users`);
     
     const users = await response.json();
 
@@ -30,20 +28,7 @@ async function listarUsuarios(currentPage) {
   }
 }
 
-// Funções para navegação
-function proximaPagina() {
-  currentPage++;
-  listarUsuarios(currentPage);
-}
-
-function paginaAnterior() {
-  if (currentPage > 1) {
-    currentPage--;
-    listarUsuarios(currentPage);
-  }
-}
-
-/*
+/* Outra forma de carregar os dados da API após carregar a página
 document.addEventListener("DOMContentLoaded", function () {
   listarUsuarios(currentPage);
 });
